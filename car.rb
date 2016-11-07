@@ -21,4 +21,8 @@ class Car
         @speed < 10 ? @speed = 0 : @speed -= 10
     end 
 
+    def number_of_passengers
+        return @passengers.length
+    end
+
 end
