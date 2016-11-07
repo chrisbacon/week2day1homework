@@ -16,6 +16,6 @@ class Car
     end
 
     def brakes()
-        @speed -= 10
+        @speed < 10 ? @speed = 0 : @speed -= 10
     end    
 end
