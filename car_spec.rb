@@ -24,11 +24,11 @@ class TestCar < MiniTest::Test
         assert_equal(0, @car.speed)
     end
 
-    # def test_car_accelerates
-    #     @car.accelerates()
-    #     assert_equal(10, @car.speed)
-    #     assert_equal(95, @car.fuel)
-    # end
+    def test_car_accelerates
+        @car.accelerates()
+        assert_equal(10, @car.speed)
+        assert_equal(95, @car.fuel)
+    end
 
     # def test_car_brakes__speed_not_zero
     #     @car.accelerates()
