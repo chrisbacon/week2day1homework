@@ -1,12 +1,14 @@
 class Car
     
-    attr_reader :colour, :model, :fuel, :speed
+    attr_reader :colour, :model, :fuel, :speed, :driver
 
-    def initialize(colour, model)
+    def initialize(colour, model, driver)
         @colour = colour
         @model = model
+        @driver = driver
         @fuel = 100
         @speed = 0
+        @passengers = []
     end
     
     def accelerates()
@@ -17,5 +19,6 @@ class Car
 
     def brakes()
         @speed < 10 ? @speed = 0 : @speed -= 10
-    end    
+    end 
+
 end

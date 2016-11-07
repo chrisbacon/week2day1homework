@@ -1,11 +1,13 @@
 require("minitest/autorun")
 require("minitest/rg")
 require_relative("car")
+require_relative("person")
 
 class TestCar < MiniTest::Test
 
     def setup
-        @car = Car.new('Red', 'Fiesta')
+        person = Person.new('Chris', 30)
+        @car = Car.new('Red', 'Fiesta', person)
     end
 
     def test_car_has_colour
@@ -42,4 +44,21 @@ class TestCar < MiniTest::Test
         assert_equal(0, @car.speed)
     end
 
+    def test_car_has_driver
+        assert_equal('Chris', @car.driver.name)
+    end
+
+    def test_number_of_passengers
+        assert_equal(0, @car.number_of_passengers)
+    end
+
+    def test_pick_up_passenger
+        anna = Person.new('Anna', 28)
+        tony = Person.new('Tony', 59)
+
+        @car.pick_up_passenger(anna)
+        @car.pick_up_passenger(tony)
+
+        assert_equal(2, @car.number_of_passengers)
+    end
 end
