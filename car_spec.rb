@@ -52,13 +52,13 @@ class TestCar < MiniTest::Test
         assert_equal(0, @car.number_of_passengers)
     end
 
-    # def test_pick_up_passenger
-    #     anna = Person.new('Anna', 28)
-    #     tony = Person.new('Tony', 59)
+    def test_pick_up_passenger
+        anna = Person.new('Anna', 28)
+        tony = Person.new('Tony', 59)
 
-    #     @car.pick_up_passenger(anna)
-    #     @car.pick_up_passenger(tony)
+        @car.pick_up_passenger(anna)
+        @car.pick_up_passenger(tony)
 
-    #     assert_equal(2, @car.number_of_passengers)
-    # end
+        assert_equal(2, @car.number_of_passengers)
+    end
 end

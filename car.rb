@@ -25,4 +25,8 @@ class Car
         return @passengers.length
     end
 
+    def pick_up_passenger(person)
+        @passengers.push(person)
+    end
+
 end
