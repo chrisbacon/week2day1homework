@@ -6,8 +6,8 @@ require_relative("person")
 class TestCar < MiniTest::Test
 
     def setup
-        driver = Person.new('Chris', 30)
-        @car = Car.new('Red', 'Fiesta', driver)
+        @driver = Person.new('Chris', 30)
+        @car = Car.new('Red', 'Fiesta', @driver)
     end
 
     def test_car_has_colour
@@ -45,7 +45,7 @@ class TestCar < MiniTest::Test
     end
 
     def test_car_has_driver
-        assert_equal('Chris', @car.driver.name)
+        assert_equal(@driver, @car.driver)
     end
 
     def test_number_of_passengers
