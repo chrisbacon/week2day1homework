@@ -14,5 +14,8 @@ class Car
         @fuel -= 5 
         @speed += 10
     end
-    
+
+    def brakes()
+        @speed -= 10
+    end    
 end
